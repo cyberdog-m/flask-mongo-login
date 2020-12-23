@@ -1,0 +1,43 @@
+{% extends 'layout/layout.html' %}
+
+{% block head %}
+    <title>Signup</title>
+{% endblock %}
+
+{% block body %}
+    <div style="max-width: 400px; margin: auto; margin-top: 100px;">
+        <form class="p-4" action="{{url_for('auth.signup')}}" method="POST">
+            {{form.csrf_token}}
+            <img src="/static/assets/picasa.png" alt="" width="180px" class="img-fluid mx-auto d-block">
+            
+            <h3 class="fs-4 mt-5">Sign Up</h3>
+            {{form.name (class_='form-control mt-3', placeholder='Full Name')}}
+        
+            {{form.username (class_='form-control mt-3', placeholder='Username')}}
+        
+            {{form.password (class_='form-control mt-3', placeholder='Password')}}
+            
+            <div class="mt-3">
+                <input type="checkbox" id="showPwd" class="form-check-input">
+                <label for="showPwd" class="form-check-label ml-2">Show Password</label>
+            </div>
+
+            <div class="d-grid mt-3">
+                {{form.signup (class_="btn btn-primary")}}
+            </div>
+            <div class="mt-3">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{category}} d-grid m-0">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </form>
+    </div>
+   
+    <script src="/static/js/auth.js"></script>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout/layout.html' %}
+
+{% block head %}
+    <title>Test Route</title>
+{% endblock %}
+
+{% block body %}
+    <div style="max-width: 400px; margin: auto; margin-top: 130px;">
+        <div class="m-4" style="max-width: 550px;">
+            <img src="/static/assets/undraw_accept_tasks_po1c.svg" class="img-fluid">
+        </div>
+        <div class="d-grid mt-3">
+            <a href="{{ url_for('auth.login') }}" class="btn btn-primary">Login</a>
+        </div>
+        <div class="d-grid mt-3">
+            <a href="{{ url_for('auth.signup') }}" class="btn btn-outline-secondary">SignUp</a>
+        </div>
+    </div>
+{% endblock %}
