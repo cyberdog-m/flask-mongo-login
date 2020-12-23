@@ -44,4 +44,4 @@ Routes for the example Flask-App are :
   - You can use admin route to `delete users` and `reset password`.
   - NB: _You need atleast One admin user to access the `/auth/admin-panel` route_
 ## Screenshots
-![](static/assets/picasa.png)
+![](static/assets/picasa.png =250x200)
