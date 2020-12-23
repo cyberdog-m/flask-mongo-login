@@ -45,4 +45,3 @@ Routes for the example Flask-App are :
   - NB: _You need atleast One admin user to access the `/auth/admin-panel` route_
 ## Screenshots
 ![](static/assets/picasa.png)
-<img src="static/assets/picasa.png" width="40%">
