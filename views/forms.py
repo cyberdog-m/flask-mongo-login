@@ -16,19 +16,3 @@ class Signup(FlaskForm):
 class Reset(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()], render_kw={'autofocus': True})
     reset = SubmitField('Reset Password')
-
-class Order(FlaskForm):
-    orderId = StringField('orderId')
-    title = StringField('Title')
-    customerName = StringField('Customer Name')
-    particulars = StringField('Particulars')
-    delivaryDate = DateField('Delivary Date')
-    details = StringField('Details')
-    orderStatus = StringField('Order Status')
-    estimateAmount = StringField('Estimate Amount')
-    advanceAmount = StringField('Advance Amount')
-
-class TestForm(FlaskForm):
-    item = StringField('item', validators=[DataRequired()])
-    level = StringField('level')
-    submit = SubmitField('Submit')
